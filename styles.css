@@ -98,7 +98,7 @@ body.light .clock::before {
   border-radius: 6px 6px 0 0;
 }
 
-body.light .hr::before{
+body.light .hr::before {
   background: #6591b4;
 }
 
@@ -112,8 +112,8 @@ body.light .hr::before{
   border-radius: 6px 6px 0 0;
 }
 
-body.light .mn::before{
-  background: #21090d
+body.light .mn::before {
+  background: #21090d;
 }
 
 .sc::before {
@@ -126,11 +126,11 @@ body.light .mn::before{
   border-radius: 6px 6px 0 0;
 }
 
-body.light .sc::before{
+body.light .sc::before {
   background: #008eff;
 }
 
-.toggleClass{
+.toggleClass {
   position: absolute;
   top: 30px;
   right: 150px;
@@ -147,18 +147,67 @@ body.light .sc::before{
   align-items: center;
 }
 
-.toggleClass::before{
+.toggleClass::before {
   position: absolute;
   left: 25px;
   content: "Light Mode";
   white-space: nowrap;
 }
 
-body.light .toggleClass{
+body.light .toggleClass {
   background: #091921;
   color: #091921;
 }
 
-body.light .toggleClass:before{
+body.light .toggleClass:before {
   content: "Dark Mode";
+}
+
+a {
+  font-family: consolas;
+  font-size: 18px;
+  top: 8px;
+  left: 20px;
+  border-width: 0;
+  color: #cac3de;
+  cursor: pointer;
+  display: inline-block;
+  margin: 20px 0 0;
+  padding: 0;
+  position: absolute;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.35s;
+  user-select: text;
+  vertical-align: baseline;
+}
+
+a:before {
+  background: #ff105e;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.2;
+  transition: 0.5s;
+}
+
+a:hover {
+  color: #fff;
+  transition: all 0.35s cubic-bezier(0.37, 1.62, 0.49, 0.9) 0.15s;
+}
+
+a:hover:before {
+  transition: height 0.15s,
+    width 0.35s 0.15s cubic-bezier(0.37, 1.62, 0.49, 0.9),
+    transform 0.35s 0.15s cubic-bezier(0.37, 1.62, 0.49, 0.9), color 0.35s,
+    bottom 0.35s cubic-bezier(0.37, 1.62, 0.49, 0.9);
+  opacity: 1;
+  bottom: -20px;
+  transform: translate(-15px, -10px);
+  width: calc(100% + 30px);
+  height: calc(100% + 20px);
+  border-radius: 6px;
 }
